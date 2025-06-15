@@ -38,7 +38,7 @@ export default function Hero(){
   }
     return(
         /* Hero Section */
-      <section className="min-h-screen flex items-center justify-center px-4 py-8 md:py-16">
+      <section className="min-h-screen flex items-center overflow-hidden justify-center px-4 py-8 md:py-12">
       <div className="container mx-auto text-center max-w-4xl">
         <Badge variant="secondary" className="mb-4 md:mb-6">
           <Star className="w-3 h-3 mr-1" />
@@ -61,7 +61,7 @@ export default function Hero(){
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyPress={handleKeyPress}
-              className="pl-10 md:pl-12 pr-10 md:pr-12 py-3 md:py-4 text-sm md:text-base lg:text-lg bg-card border-border text-foreground placeholder-muted-foreground focus:border-primary focus:ring-primary rounded-lg"
+              className="pl-10 md:pl-12 pr-10 md:pr-12 py-3 md:py-4 text-base md:text-base lg:text-lg bg-card border-border text-foreground placeholder-muted-foreground focus:border-primary focus:ring-primary rounded-lg"
             />
             <Button
               type="button"
