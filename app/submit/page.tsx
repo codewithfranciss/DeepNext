@@ -186,7 +186,7 @@ export default function SubmitPage() {
                   onChange={(e) => handleInputChange("authorImage", e.target.value)}
                   className="bg-background border-border"
                 />
-                <p className="text-xs text-muted-foreground">Provide a URL to the author's profile image or avatar</p>
+                <p className="text-xs text-muted-foreground">Provide a URL to the authors profile image or avatar</p>
               </div>
 
               {/* Description */}
