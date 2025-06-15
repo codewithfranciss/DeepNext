@@ -6,6 +6,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Header from "@/components/header/Header"
+import Hero from "@/components/hero/Hero"
 import { Search, BookOpen, Video, Wrench, FileText, Github, Star, Users, Zap, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -40,6 +41,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
+      <Hero />
     </div>
   )
 }
