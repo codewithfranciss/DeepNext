@@ -2,12 +2,10 @@
 import type React from "react"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import Link from "next/link"
 import { Search, Star, } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { ThemeToggle } from "@/components/theme-toggle"
 export default function Hero(){
     const stats = [
         { value: "500+", label: "Resources", color: "text-blue-500" },
@@ -27,7 +25,7 @@ export default function Hero(){
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
-      handleSearch(e as any)
+      
     }
   }
 
