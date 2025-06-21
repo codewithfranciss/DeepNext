@@ -28,7 +28,20 @@ export default function WaitlistPage() {
     }
 
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    //Simulate api call
+    const res = await fetch("api/waitlist", {
+        method: "POST",
+        headers: 
+            { "Content-Type": "application/json" },
+        body: JSON.stringify({email})
+    })
+    const result = await res.json();
+    if(result.message == "Already Joined"){
+        setIsSubmitting(false)
+        setError("You have already joined the waitlist with this email.")
+        return
+    }
+
     setIsSubmitting(false)
     setIsSubmitted(true)
   }
