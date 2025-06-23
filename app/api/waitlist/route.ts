@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     // Send confirmation email
     await resend.emails.send({
       from: "DeepNext <onboarding@resend.dev>",
-      to: email,
+      to: ["chidoziemfrancis@gmail.com"],
       subject: "🎉 You are on the DeepNext Waitlist!",
       html: `
      <div style="font-family: Arial, sans-serif; padding: 24px; background: #0f172a; color: white; border-radius: 12px;">
@@ -66,6 +66,8 @@ export async function POST(request: Request) {
 
     `
     });
+    
+
 
     return NextResponse.json({ message: "Successfully joined waitlist" }, { status: 200 });
   } catch (err: any) {
